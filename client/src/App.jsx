@@ -1,16 +1,18 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import LockUrl from "./pages/LockUrl";
-import UnlockUrl from "./pages/UnlockUrl";
+import Footer from "./components/Footer";
 import Header from "./components/Header";
+import Lock from "./pages/Lock";
+import Unlock from "./pages/Unlock";
 
 export default function App() {
   return (
     <BrowserRouter>
-    <Header />
+      {/* <Header /> */}
       <Routes>
-        <Route path="/" element={<LockUrl />} />
-        <Route path="/unlock" element={<UnlockUrl />} />
+        <Route path="/" element={<Lock />} />
+        <Route path="/unlock" element={<Unlock />} />
       </Routes>
+      {/* <Footer /> */}
     </BrowserRouter>
   );
 }
