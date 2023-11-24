@@ -1,6 +1,7 @@
 import Url from "../modals/urls.lock.js";
 import { nanoid } from "nanoid";
 import bcryptjs from 'bcryptjs';
+import { parse } from 'url';
 
 async function handleGenerateShortUrl(req, res) {
   const { redirectUrl, password } = req.body;
@@ -24,10 +25,11 @@ async function handleGenerateShortUrl(req, res) {
 }
 
 async function handleUnlockShortUrl(req, res) {
-  const { shortUrl } = req.params;
+  const { pathname } = parse(req.body.shortUrl);
   const { password } = req.body;
 
   try {
+    const shortUrl = pathname.slice(1);
     const url = await Url.findOne({ shortUrl });
 
     if (!url) {
