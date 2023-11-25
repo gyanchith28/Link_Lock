@@ -7,10 +7,11 @@ import Unlock from "./pages/Unlock";
 export default function App() {
   return (
     <BrowserRouter>
-      {/* <Header /> */}
+      <Header />
       <Routes>
         <Route path="/" element={<Lock />} />
         <Route path="/unlock" element={<Unlock />} />
+        <Route path="/unlock/:shortid" element={<Unlock />} />
       </Routes>
       {/* <Footer /> */}
     </BrowserRouter>
