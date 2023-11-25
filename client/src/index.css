@@ -1,4 +1,8 @@
 :root {
-  background-color: #F4DCDC;
+  background-color: #FCF5ED;
 }
 
+body {
+  margin:0;
+  padding:0
+}

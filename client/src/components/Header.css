@@ -1,0 +1,15 @@
+/* Header.css */
+.navbar {
+    background-color: #CE5A67;
+    padding: 10px; /* Adjust padding as needed */
+    text-align: center;
+  }
+  
+  .project-name {
+    font-family: 'Yatra One', sans-serif; /* Use the Yatra One font from Google Fonts */
+    color: white; /* Set text color to white or another suitable color */
+    margin: 0; /* Remove default margin for the heading */
+    font-size: 64px; /* Set the font size to 64 pixels */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Add a drop shadow */
+  }
+  
