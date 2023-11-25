@@ -37,7 +37,7 @@ async function handleUnlockShortUrl(req, res) {
     }
     const validPassword = bcryptjs.compareSync(password, url.password)
     if (validPassword) {
-      res.redirect(url.redirectUrl);
+      return res.status(200).json({ url: url.redirectUrl });
     } else {
       return res.status(401).json({ error: "Invalid password" });
     }

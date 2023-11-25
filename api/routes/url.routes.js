@@ -7,6 +7,6 @@ import {
 const router = express.Router();
 
 router.post("/generate", handleGenerateShortUrl);
-router.get("/unlock", handleUnlockShortUrl);
+router.post("/unlock", handleUnlockShortUrl);
 
 export default router;
